@@ -16,8 +16,8 @@ def tap(x, y):
     if ball.x < -198:
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        speed.x = (x + 200) / 25 * 2 #Se aumenta la velocidad
+        speed.y = (y + 200) / 25 * 2 #Se aumenta la velocidad
 
 def inside(xy):
     """
@@ -54,7 +54,7 @@ def move():
 
     # Move existing targets
     for target in targets:
-        target.x -= 0.5
+        target.x -= 1
 
     # Move the ball and apply gravity
     if inside(ball):
